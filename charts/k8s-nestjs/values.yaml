@@ -14,7 +14,12 @@ canary:
   labels: {}
   progressDeadlineSeconds: 60
 deploymentLabels: {}
-env: null
+env:
+  DATABASE_NAME: app
+  DATABASE_USER: postgres
+  DATABASE_PASSWORD: postgres
+  DATABASE_HOST: postgres-db-lb.jx-staging.svc.cluster.local
+  DATABASE_PORT: 5432
 hpa:
   cpuTargetAverageUtilization: 80
   enabled: false
@@ -74,7 +79,7 @@ resources:
 service:
   annotations: {}
   externalPort: 80
-  internalPort: 8080
+  internalPort: 3000
   labels: {}
   name: k8s-nestjs
   type: ClusterIP
