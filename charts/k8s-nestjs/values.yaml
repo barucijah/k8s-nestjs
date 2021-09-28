@@ -29,8 +29,8 @@ hpa:
   minReplicas: 2
 image:
   pullPolicy: IfNotPresent
-  repository: draft
-  tag: dev
+  repository: gcr.io/vocal-tracer-324708/k8s-nestjs
+  tag: 0.0.7
 ingress:
   annotations: {}
   classAnnotation: ""
